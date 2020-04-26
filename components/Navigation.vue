@@ -42,7 +42,7 @@
             v-scroll-to="'#rent'"
             class="text-2xl font-medium bg-white rounded-lg px-10 py-3 border-2 border-transparent focus:outline-none hidden sm:inline"
             :class="{
-              'border-purple-200': isOutOfView,
+              'border-indigo-700': isOutOfView,
               'shadow-md': !isOutOfView
             }"
           >

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-purple-300 relative banner">
+  <div class="bg-indigo-800 relative banner">
     <div
       class="container flex flex-col-reverse lg:flex-row flex-wrap h-full items-center"
     >

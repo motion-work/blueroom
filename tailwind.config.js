@@ -101,9 +101,9 @@ module.exports = {
         300: '#a3bffa',
         400: '#7f9cf5',
         500: '#667eea',
-        600: '#5a67d8',
-        700: '#4c51bf',
-        800: '#434190',
+        600: '#6B74F2',
+        700: '#4E58E2',
+        800: '#3444B3',
         900: '#3c366b'
       },
       purple: {
@@ -173,10 +173,10 @@ module.exports = {
     }),
     borderRadius: {
       none: '0',
-      sm: '0.125rem',
-      default: '0.25rem',
+      sm: '0.1875rem',
+      default: '0.3125rem',
       md: '0.375rem',
-      lg: '0.5rem',
+      lg: '0.59rem',
       xl: '0.9375rem',
       full: '9999px'
     },
@@ -194,8 +194,7 @@ module.exports = {
         '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       md:
         '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-      lg:
-        '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      lg: '5px 10px 35px rgba(0, 0, 0, 0.3)',
       xl:
         '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',

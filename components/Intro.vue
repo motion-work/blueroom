@@ -1,6 +1,6 @@
 <template>
   <section class="min-h-screen flex flex-col">
-    <Strain class="absolute top-0 strain" />
+    <Strain class="absolute top-0 insex-x-0 strain" />
     <MiniStrain class="mini-strain hidden sm:inline" />
     <HalfStrain class="half-strain" />
     <OrangeMiniStrain class="orange-mini-strain" />

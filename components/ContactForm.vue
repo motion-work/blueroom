@@ -201,7 +201,7 @@ export default {
           light: 'border-2 border-gray-100 vc-rounded-lg vc-bg-white'
         },
         title: {
-          light: 'text-3xl font-body hover:text-purple-100 mb-4'
+          light: 'text-3xl font-body hover:text-indigo-600 mb-4'
         },
         dayContent: 'text-2xl font-body rounded-full p-6',
         dayContentDisabled: {
@@ -213,7 +213,7 @@ export default {
         },
         arrows: {
           light:
-            'vc-text-gray-600 vc-rounded vc-border-transparent hover:text-purple-100 focus:vc-border-gray-300 h-10'
+            'vc-text-gray-600 vc-rounded vc-border-transparent hover:text-indigo-600 focus:vc-border-gray-300 h-10'
         }
       }
     }
