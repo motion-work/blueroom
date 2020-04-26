@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="transform scale-105"
+    class="-mb-px"
     viewBox="0 0 2299 434"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

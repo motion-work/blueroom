@@ -1,10 +1,15 @@
 <template>
-  <section class="min-h-screen flex flex-col">
-    <MobileSectionSeparator class="absolute top-0 inset-x-0 md:hidden" />
+  <section class="min-h-screen flex flex-col relative z-20">
+    <img
+      src="~/assets/img/mobile-bg.svg"
+      alt=""
+      class="md:hidden absolute w-full"
+    />
     <Strain class="absolute top-0 inset-x-0 strain hidden md:block" />
     <MiniStrain class="mini-strain hidden sm:inline" />
     <HalfStrain class="half-strain" />
     <OrangeMiniStrain class="orange-mini-strain" />
+
     <div
       class="container relative z-10 pt-32 md:pt-56 flex-1 flex flex-col items-start"
     >
@@ -43,15 +48,13 @@ import Strain from '~/components/svgs/Strain'
 import MiniStrain from '~/components/svgs/MiniStrain'
 import HalfStrain from '~/components/svgs/HalfStrain'
 import OrangeMiniStrain from '~/components/svgs/OrangeMiniStrain'
-import MobileSectionSeparator from '~/components/svgs/MobileSectionSeparator'
 
 export default {
   components: {
     Strain,
     MiniStrain,
     HalfStrain,
-    OrangeMiniStrain,
-    MobileSectionSeparator
+    OrangeMiniStrain
   }
 }
 </script>

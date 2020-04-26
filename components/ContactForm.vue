@@ -3,8 +3,8 @@
     <div class="container">
       <h2 class="text-6xl font-bold mb-8  ">Reservieren</h2>
 
-      <form class="flex flex-wrap -mx-8" @submit.prevent="send">
-        <div class="w-full lg:w-1/2 px-8">
+      <form class="flex flex-wrap -mx-4 xl:-mx-8" @submit.prevent="send">
+        <div class="w-full lg:w-1/2 px-4 xl:px-8">
           <div class="flex flex-wrap -m-2">
             <div class="w-full sm:w-1/2 p-2">
               <div class="flex items-center mb-4">
@@ -87,7 +87,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full lg:w-1/2 px-8">
+        <div class="w-full lg:w-1/2 px-4 xl:px-8">
           <div class="flex flex-wrap">
             <div class="w-full sm:w-2/3">
               <FormInput
@@ -198,7 +198,7 @@ export default {
       ],
       calendarTheme: {
         container: {
-          light: 'border-2 border-gray-100 vc-rounded-lg vc-bg-white'
+          light: 'max-w-full border-2 border-gray-100 vc-rounded-lg vc-bg-white'
         },
         title: {
           light: 'text-3xl font-body hover:text-indigo-600 mb-4'
@@ -209,7 +209,7 @@ export default {
             'text-2xl font-body rounded-full p-6 vc-text-gray-400 vc-pointer-events-none'
         },
         weekdays: {
-          light: 'text-2xl font-body vc-font-bold vc-text-gray-500'
+          light: 'text-xl font-body vc-font-bold vc-text-gray-500'
         },
         arrows: {
           light:

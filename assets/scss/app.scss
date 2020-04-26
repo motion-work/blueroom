@@ -10,7 +10,13 @@ body {
 }
 
 .container {
-  @apply px-8 max-w-7xl mx-auto;
+  @apply px-4 max-w-7xl mx-auto;
+}
+
+@screen lg {
+  .container {
+    @apply px-10;
+  }
 }
 
 @screen xl {

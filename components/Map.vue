@@ -1,7 +1,7 @@
 <template>
   <div class="intro relative">
     <!-- Map -->
-    <div class="map">
+    <div class="absolute inset-0">
       <client-only>
         <MglMap
           :access-token="accessToken"
@@ -65,10 +65,12 @@ export default {
 
 <style lang="scss" scoped>
 .intro {
-  height: 200vh;
+  height: 150vh;
 }
 
-.map {
-  @apply absolute inset-0 w-full;
+@screen 2xl {
+  .intro {
+    height: 200vh;
+  }
 }
 </style>

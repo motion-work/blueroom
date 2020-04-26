@@ -2,7 +2,7 @@
   <section class="container mt-32">
     <div class="flex flex-wrap -m-3">
       <div class="w-full sm:w-1/2 lg:w-1/3 p-3">
-        <h3 class="text-6xl text-center mb-10">1 Stunde</h3>
+        <h3 class="text-4xl lg:text-6xl text-center mb-10">1 Stunde</h3>
         <div
           class="bg-indigo-600 rounded flex items-center justify-center text-white py-20 px-16"
         >
@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="w-full sm:w-1/2 lg:w-1/3 p-3">
-        <h3 class="text-6xl text-center mb-10">1 Halber Tag</h3>
+        <h3 class="text-4xl lg:text-6xl text-center mb-10">1 Halber Tag</h3>
         <div
           class="bg-indigo-600 rounded flex items-center justify-center text-white py-20 px-16"
         >
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="w-full sm:w-1/2 lg:w-1/3 p-3">
-        <h3 class="text-6xl text-center mb-10">1 Tag</h3>
+        <h3 class="text-4xl lg:text-6xl text-center mb-10">1 Tag</h3>
         <div
           class="bg-indigo-600 rounded flex items-center justify-center text-white py-20 px-16"
         >

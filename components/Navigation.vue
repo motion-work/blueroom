@@ -11,14 +11,14 @@
           <img src="/img/logo.svg" alt="theroom." />
         </nuxt-link>
 
-        <h2 v-else key="map" class="font-bold text-2xl flex">
+        <h3 v-else key="map" class="font-bold text-xl md:text-2xl flex">
           10 Minuten zu
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="43"
             viewBox="0 0 26 43"
-            class="mx-4 h-8"
+            class="mx-4 h-6 md:h-8"
           >
             <defs>
               <style>
@@ -33,7 +33,7 @@
               transform="translate(-12 -1)"
             /></svg
           >vom Bahnhof
-        </h2>
+        </h3>
       </transition>
 
       <ul>
