@@ -19,11 +19,11 @@ module.exports = {
       white: '#fff',
 
       gray: {
-        100: '#f7fafc',
+        100: '#F2F2F2',
         200: '#edf2f7',
         300: '#e2e8f0',
         400: '#cbd5e0',
-        500: '#a0aec0',
+        500: '#A0A0A0',
         600: '#718096',
         700: '#4a5568',
         800: '#2d3748',
@@ -275,7 +275,8 @@ module.exports = {
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3.125rem',
-      '6xl': '4rem'
+      '6xl': '4rem',
+      '7xl': '5.125rem'
     },
     fontWeight: {
       hairline: '100',

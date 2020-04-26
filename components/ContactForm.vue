@@ -1,7 +1,7 @@
 <template>
-  <section id="rent" class="pt-32">
+  <section id="rent" class="pt-16 lg:pt-20 xl:pt-32">
     <div class="container">
-      <h2 class="text-6xl font-bold mb-8  ">Reservieren</h2>
+      <h2 class="text-4xl lg:text-6xl font-bold mb-6">Jetzt Reservieren</h2>
 
       <form class="flex flex-wrap -mx-4 xl:-mx-8" @submit.prevent="send">
         <div class="w-full lg:w-1/2 px-4 xl:px-8">
@@ -88,8 +88,8 @@
           </div>
         </div>
         <div class="w-full lg:w-1/2 px-4 xl:px-8">
-          <div class="flex flex-wrap">
-            <div class="w-full sm:w-2/3">
+          <div class="flex flex-wrap mt-8 lg:mt-0">
+            <div class="w-full xl:w-2/3">
               <FormInput
                 v-model="user.name"
                 v-validate="'required'"
@@ -97,6 +97,15 @@
                 required
                 :error="errors.first('Name')"
                 placeholder="Vollständiger Name"
+                class="mb-5"
+              />
+              <FormInput
+                v-model="user.company"
+                v-validate="'required'"
+                name="Firma"
+                required
+                :error="errors.first('Firma')"
+                placeholder="Firma (optional)"
                 class="mb-5"
               />
               <FormInput
@@ -120,7 +129,7 @@
               <textarea
                 v-model="user.remark"
                 class="w-full remark-field"
-                placeholder="Bemerkung"
+                placeholder="Bemerkung (optional)"
               ></textarea>
 
               <label class="label mb-4"
@@ -149,9 +158,16 @@
 
               <div class="text-right">
                 <button
-                  class="bg-green-400 text-2xl w-full text-white font-bold px-10 py-3 mt-4 rounded-xl"
+                  class="bg-green-400 text-2xl w-full text-white font-bold px-10 py-3 mt-4 rounded-xl flex items-center justify-center"
                 >
-                  Anfragen
+                  Anfrage senden
+                  <svg fill="currentColor" viewBox="0 0 20 20" class="ml-3 h-8">
+                    <path
+                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -174,6 +190,7 @@ export default {
     return {
       user: {
         name: '',
+        company: '',
         email: '',
         phone: '',
         remark: '',
@@ -251,21 +268,26 @@ export default {
 
 <style lang="scss" scoped>
 .remark-field {
-  @apply bg-gray-100 rounded-xl text-2xl py-3 px-5 mb-5;
   min-height: 142px;
   max-height: 300px;
+
+  @apply transition duration-200 border-2 border-transparent bg-gray-100 rounded-xl text-2xl py-3 px-5 mb-5;
 }
 
 .remark-field:focus {
-  @apply outline-none;
+  @apply outline-none border-indigo-500;
 }
 
 .remark-field::placeholder {
-  @apply text-gray-200;
+  @apply text-gray-500;
 }
 
 .checkbox-label {
-  @apply flex items-center cursor-pointer text-3xl border-2 border-gray-100 w-full rounded-lg py-3 px-4;
+  @apply flex items-center cursor-pointer text-2xl border-2 border-gray-100 w-full rounded-lg py-3 px-4;
+}
+
+@screen xl {
+  @apply text-3xl;
 }
 
 .checkbox-circle {

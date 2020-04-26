@@ -81,13 +81,13 @@ export default {
 
 <style>
 .input {
-  @apply bg-gray-100 rounded-xl text-2xl font-medium px-5 py-3;
+  @apply transition duration-200 bg-gray-100 rounded-xl text-2xl font-medium px-5 py-3 border-2 border-transparent;
 }
 .input:focus {
-  @apply outline-none;
+  @apply outline-none border-indigo-500;
 }
 
 .input::placeholder {
-  @apply text-gray-200;
+  @apply text-gray-500;
 }
 </style>

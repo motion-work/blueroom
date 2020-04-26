@@ -12,9 +12,8 @@
       </div>
       <div class="w-full lg:w-2/3 text-white text-padding pt-6 lg:pt-0">
         <h2 class="text-6xl font-bold">Catering</h2>
-        <p class="max-w-md text-xl mb-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p class="max-w-md text-2xl mb-5">
+          Gerne offerieren wir Ihnen einen Apéro oder frisch zubereitete Menüs.
         </p>
       </div>
     </div>
