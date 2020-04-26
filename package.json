@@ -1,0 +1,40 @@
+{
+  "name": "blueroom",
+  "version": "1.0.0",
+  "description": "Blaues Kreuz Landing Page - Raumreservations-Tool",
+  "author": "Nattha",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "mapbox-gl": "^1.9.1",
+    "nuxt": "^2.0.0",
+    "nuxt-validate": "^1.0.1",
+    "swiper": "^5.3.8",
+    "v-calendar": "^1.0.5",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-mapbox": "^0.4.1",
+    "vue-scrollto": "^2.18.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "@teamnovu/nuxt-breaky": "^1.2.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "node-sass": "^4.14.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2"
+  }
+}

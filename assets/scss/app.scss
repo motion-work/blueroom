@@ -1,0 +1,27 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+@import '_fonts';
+@import '_inputs';
+
+body {
+  @apply font-body antialiased;
+}
+
+.container {
+  @apply px-8 max-w-7xl mx-auto;
+}
+
+@screen xl {
+  .container {
+    @apply px-10;
+  }
+}
+
+.mapboxgl-ctrl-top-right {
+  @apply hidden;
+}
+
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
