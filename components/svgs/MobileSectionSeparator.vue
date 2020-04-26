@@ -1,0 +1,15 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="375" height="733.937">
+    <path
+      data-name="Path 2173"
+      d="M0 0h375v631.33C262.289 663.718 257.737 795.022 0 700V0z"
+      fill="#fff"
+    />
+  </svg>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style lang="scss" scoped></style>

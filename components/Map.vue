@@ -1,27 +1,31 @@
 <template>
-  <div class="map">
-    <client-only>
-      <MglMap
-        :access-token="accessToken"
-        :map-style="mapStyle"
-        :scroll-zoom="false"
-        :center="center"
-        :zoom="16"
-      >
-        <MglMarker :coordinates="roomCoords" :offset="[0, -35]">
-          <template slot="marker">
-            <Pin />
-          </template>
-        </MglMarker>
-        <MglMarker :coordinates="trainCoords" :offset="[30, 0]">
-          <template slot="marker">
-            <TrainStationLabel />
-          </template>
-        </MglMarker>
-      </MglMap>
-    </client-only>
-    <HalfPipe class="absolute bottom-0 w-full z-10 pointer-events-none" />
-    <slot />
+  <div class="intro relative">
+    <!-- Map -->
+    <div class="map">
+      <client-only>
+        <MglMap
+          :access-token="accessToken"
+          :map-style="mapStyle"
+          :scroll-zoom="false"
+          :center="center"
+          :zoom="16"
+        >
+          <MglMarker :coordinates="roomCoords" :offset="[0, -35]">
+            <template slot="marker">
+              <Pin />
+            </template>
+          </MglMarker>
+          <MglMarker :coordinates="trainCoords" :offset="[30, 0]">
+            <template slot="marker">
+              <TrainStationLabel />
+            </template>
+          </MglMarker>
+        </MglMap>
+      </client-only>
+      <HalfPipe class="absolute bottom-0 w-full z-10 pointer-events-none" />
+    </div>
+    <!-- END Map -->
+    <Intro />
   </div>
 </template>
 
@@ -29,12 +33,14 @@
 import HalfPipe from '~/components/svgs/HalfPipe'
 import Pin from '~/components/svgs/Pin'
 import TrainStationLabel from '~/components/svgs/TrainStationLabel'
+import Intro from '~/components/Intro'
 
 export default {
   components: {
     HalfPipe,
     Pin,
-    TrainStationLabel
+    TrainStationLabel,
+    Intro
   },
 
   data() {
@@ -58,9 +64,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.map {
+.intro {
   height: 200vh;
+}
 
-  @apply absolute top-0 w-full;
+.map {
+  @apply absolute inset-0 w-full;
 }
 </style>

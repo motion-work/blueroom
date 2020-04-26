@@ -1,6 +1,7 @@
 <template>
   <section class="min-h-screen flex flex-col">
-    <Strain class="absolute top-0 insex-x-0 strain" />
+    <MobileSectionSeparator class="absolute top-0 inset-x-0 md:hidden" />
+    <Strain class="absolute top-0 inset-x-0 strain hidden md:block" />
     <MiniStrain class="mini-strain hidden sm:inline" />
     <HalfStrain class="half-strain" />
     <OrangeMiniStrain class="orange-mini-strain" />
@@ -34,7 +35,6 @@
         </svg>
       </div>
     </div>
-    <ImageSlider class="lg:mb-10 3xl:mb-20" />
   </section>
 </template>
 
@@ -43,7 +43,7 @@ import Strain from '~/components/svgs/Strain'
 import MiniStrain from '~/components/svgs/MiniStrain'
 import HalfStrain from '~/components/svgs/HalfStrain'
 import OrangeMiniStrain from '~/components/svgs/OrangeMiniStrain'
-import ImageSlider from '~/components/ImageSlider'
+import MobileSectionSeparator from '~/components/svgs/MobileSectionSeparator'
 
 export default {
   components: {
@@ -51,7 +51,7 @@ export default {
     MiniStrain,
     HalfStrain,
     OrangeMiniStrain,
-    ImageSlider
+    MobileSectionSeparator
   }
 }
 </script>
@@ -59,8 +59,8 @@ export default {
 <style lang="scss" scoped>
 .strain {
   top: 0;
-  left: -300px;
-  width: 1300px;
+  left: -200px;
+  width: 100%;
 }
 
 @screen 2xl {
