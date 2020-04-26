@@ -1,7 +1,7 @@
 <template>
   <div>
     <client-only>
-      <div ref="swiper" v-swiper:mySwiper="swiperOption">
+      <div v-swiper:mySwiper="swiperOption">
         <div class="swiper-wrapper">
           <div
             v-for="(image, index) in images"
@@ -35,20 +35,17 @@ export default {
         '/img/room/3.jpg'
       ]
     }
-  },
-  computed: {
-    swiper() {
-      return this.$refs.swiper.swiper
-    }
   }
 }
 </script>
 
 <style lang="scss">
 .swiper-slide {
-  height: 330px;
+  height: 330px !important;
+
   @apply rounded-lg shadow-lg;
 }
+
 .swiper-container {
   @apply rounded;
 }
