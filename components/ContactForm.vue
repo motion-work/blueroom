@@ -166,7 +166,7 @@
               <div class="text-right">
                 <button
                   type="submit"
-                  class="bg-green-400 text-2xl w-full text-white font-bold px-10 py-3 mt-4 rounded-xl flex items-center justify-center"
+                  class="bg-green-400 text-2xl w-full text-white font-bold px-10 py-3 mt-6 md:mt-8 rounded-xl flex items-center justify-center"
                 >
                   Anfrage senden
                   <svg fill="currentColor" viewBox="0 0 20 20" class="ml-3 h-8">

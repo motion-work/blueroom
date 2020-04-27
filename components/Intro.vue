@@ -31,7 +31,7 @@
           width="26.622"
           height="19.004"
           viewBox="0 0 26.622 19.004"
-          class="transition arrow-right"
+          class="transition transform duration-300 hover:rotate-90 arrow-right"
         >
           <path
             d="M250.362,718.167l-8.874-8.874-1.255,1.255,7.359,7.36H224v1.775h23.592l-7.359,7.36,1.255,1.255,8.874-8.874A.888.888,0,0,0,250.362,718.167Z"
@@ -40,6 +40,8 @@
         </svg>
       </div>
     </div>
+
+    <ImageSlider class="mb-10" />
   </section>
 </template>
 
@@ -48,13 +50,15 @@ import Strain from '~/components/svgs/Strain'
 import MiniStrain from '~/components/svgs/MiniStrain'
 import HalfStrain from '~/components/svgs/HalfStrain'
 import OrangeMiniStrain from '~/components/svgs/OrangeMiniStrain'
+import ImageSlider from '~/components/ImageSlider'
 
 export default {
   components: {
     Strain,
     MiniStrain,
     HalfStrain,
-    OrangeMiniStrain
+    OrangeMiniStrain,
+    ImageSlider
   }
 }
 </script>
@@ -86,14 +90,28 @@ export default {
 
 .orange-mini-strain {
   @apply absolute;
-  bottom: -150px;
-  right: 40px;
+  top: 400px;
+  right: 5px;
+  transform: scale(0.6);
+
+  @screen md {
+    top: initial;
+    bottom: -150px;
+    transform: scale(1);
+  }
 }
 
 .half-strain {
   @apply absolute;
-  top: 500px;
+  top: 400px;
   right: 0;
+  transform-origin: top right;
+  transform: scale(0.7);
+
+  @screen md {
+    top: 500px;
+    transform: scale(1);
+  }
 }
 
 .btn-learn-more:hover .arrow-right {

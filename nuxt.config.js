@@ -91,7 +91,12 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
 
-    '@teamnovu/nuxt-breaky'
+    [
+      '@teamnovu/nuxt-breaky',
+      {
+        enabled: false
+      }
+    ]
   ],
   /*
    ** Nuxt.js modules
