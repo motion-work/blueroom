@@ -10,6 +10,7 @@
       <ContactForm />
       <Footer />
     </div>
+    <Loading />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import Pricing from '~/components/Pricing'
 import ContactForm from '~/components/ContactForm'
 import Footer from '~/components/Footer'
 import Map from '~/components/Map'
+import Loading from '~/components/Loading'
 
 export default {
   components: {
@@ -30,7 +32,8 @@ export default {
     Banner,
     Pricing,
     ContactForm,
-    Footer
+    Footer,
+    Loading
   },
 
   data() {
