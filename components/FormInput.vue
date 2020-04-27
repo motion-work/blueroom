@@ -79,7 +79,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.input:required {
+  @apply shadow-none;
+}
+
 .input {
   @apply transition duration-200 bg-gray-100 rounded-xl text-2xl font-medium px-5 py-3 border-2 border-transparent;
 }
