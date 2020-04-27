@@ -23,7 +23,29 @@
         </MglMap>
       </client-only>
       <HalfPipe class="absolute bottom-0 w-full z-10 pointer-events-none" />
+      <div
+        class="absolute bottom-0 pb-10 lg:pb-20 mx-auto flex justify-center inset-x-0"
+      >
+        <a href="https://goo.gl/maps/RsrnwRqpcc5E2Xak7" target="blank">
+          <div
+            class="flex items-center flex-col bg-white rounded-full py-4 px-6 transition-transform transform duration-200 hover:scale-110 shadow-md"
+          >
+            <div class="flex items-center">
+              <div class="overflow-hidden rounded-full mr-2">
+                <img
+                  src="~/assets/img/gmaps-icon.png"
+                  alt="Google Maps"
+                  class="h-6"
+                />
+              </div>
+
+              In Google Maps öffnen
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
+
     <!-- END Map -->
     <Intro />
   </div>
