@@ -153,11 +153,19 @@
                 class="border-t-2 border-black flex justify-between mt-10 pt-1 font-bold"
               >
                 <p class="text-2xl">Total</p>
-                <p class="text-2xl">{{ total }}.-</p>
+                <div class="text-2xl">
+                  <transition name="slide-in">
+                    <span v-if="user.catering">
+                      ab
+                    </span>
+                  </transition>
+                  <span> {{ total }}.- </span>
+                </div>
               </div>
 
               <div class="text-right">
                 <button
+                  type="submit"
                   class="bg-green-400 text-2xl w-full text-white font-bold px-10 py-3 mt-4 rounded-xl flex items-center justify-center"
                 >
                   Anfrage senden
@@ -248,21 +256,23 @@ export default {
 
     total() {
       if (this.user.duration === 'hour') {
-        return 120
+        return this.user.isNPO ? 78 : 120
       }
 
       if (this.user.duration === 'half') {
-        return 280
+        return this.user.isNPO ? 182 : 280
       }
 
-      return 460
+      return this.user.isNPO ? 299 : 460
     }
   },
 
   methods: {
     decrement() {},
     increment() {},
-    send() {}
+    send() {
+      console.log(this.user)
+    }
   }
 }
 </script>
@@ -293,5 +303,17 @@ export default {
 
 .checkbox-circle {
   @apply w-8 h-8 inline-block rounded-full border-2 border-gray-100 mr-4;
+}
+
+.slide-in-enter-active {
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+.slide-in-leave-active {
+  transition: opacity 0.5s ease, transform 0.2s ease;
+}
+.slide-in-enter,
+.slide-in-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
 }
 </style>
