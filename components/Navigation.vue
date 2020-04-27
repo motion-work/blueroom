@@ -8,7 +8,7 @@
     <div class="container flex justify-between items-center">
       <transition name="slide" mode="out-in">
         <nuxt-link v-if="!reachedMapArea" key="logo" to="/">
-          <img src="/img/logo.svg" alt="theroom." />
+          <Logo />
         </nuxt-link>
 
         <h3 v-else key="map" class="font-bold text-xl md:text-2xl flex">
@@ -55,7 +55,13 @@
 </template>
 
 <script>
+import Logo from '~/components/Logo'
+
 export default {
+  components: {
+    Logo
+  },
+
   data() {
     return {
       isOutOfView: false,
