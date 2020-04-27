@@ -53,7 +53,7 @@ export default {
 
   head() {
     return {
-      title: 'blueroom.'
+      title: 'blueroom. | Konferenzraum mieten Bern'
     }
   }
 }
