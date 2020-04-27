@@ -94,7 +94,7 @@ export default {
     [
       '@teamnovu/nuxt-breaky',
       {
-        enabled: false
+        enabled: true
       }
     ]
   ],
