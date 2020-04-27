@@ -29,5 +29,11 @@ body {
   @apply hidden;
 }
 
+// CALENDAR STYLING
+
+.vc-highlight {
+  padding: 1.4rem !important;
+}
+
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';

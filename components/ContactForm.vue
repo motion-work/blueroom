@@ -220,7 +220,8 @@ export default {
         title: {
           light: 'text-3xl font-body hover:text-indigo-600 mb-4'
         },
-        dayContent: 'text-2xl font-body rounded-full p-6',
+        dayCell: 'bg-indigo-600',
+        dayContent: 'text-2xl font-body rounded-full p-6 hover:bg-indigo-600',
         dayContentDisabled: {
           light:
             'text-2xl font-body rounded-full p-6 vc-text-gray-400 vc-pointer-events-none'
