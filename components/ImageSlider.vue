@@ -1,7 +1,7 @@
 <template>
   <div>
     <client-only>
-      <div v-swiper:mySwiper="swiperOption" class="-mb-16 md:mb-0">
+      <div v-swiper:mySwiper="swiperOption" class="-mb-16 md:mb-16 xl:mb-0">
         <div class="swiper-wrapper mx-4">
           <div
             v-for="(image, index) in images"

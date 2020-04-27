@@ -8,7 +8,7 @@
           :map-style="mapStyle"
           :scroll-zoom="false"
           :center="center"
-          :zoom="16"
+          :zoom="zoom"
         >
           <MglMarker :coordinates="roomCoords" :offset="[0, -35]">
             <template slot="marker">
@@ -45,6 +45,7 @@ export default {
 
   data() {
     return {
+      zoom: 16,
       accessToken:
         'pk.eyJ1IjoibmF0dGhha2l0IiwiYSI6ImNqeXR3dWF0YTA4M20zbXByYnAwenQ0ODUifQ.fcbrMrNcT7igb3qFiE6VJg',
       mapStyle: 'mapbox://styles/natthakit/cjytwx7x20mje1cmspnsya991',
@@ -59,18 +60,25 @@ export default {
     trainCoords() {
       return [7.436607, 46.948578]
     }
+  },
+
+  mounted() {
+    if (window.innerWidth < 768) {
+      this.center = [7.435725, 46.963184]
+      this.zoom = 13.5
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .intro {
-  height: 150vh;
+  height: 155vh;
 }
 
 @screen 2xl {
   .intro {
-    height: 200vh;
+    height: 190vh;
   }
 }
 </style>
