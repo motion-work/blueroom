@@ -5,7 +5,7 @@
     appear-enter-class="fade-enter-active"
     leave-active-class="fade-leave-active"
   >
-    <div v-if="loading" class="absolute inset-0 bg-white z-top flex-center">
+    <div v-if="loading" class="fixed inset-0 bg-white z-top flex-center">
       <Logo />
     </div>
   </transition>
@@ -28,7 +28,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false
-    }, 1000)
+    }, 2000)
   },
 
   head() {
@@ -43,11 +43,10 @@ export default {
 
 <style lang="scss" scoped>
 .fade-enter-active {
-  animation: fade 0.3s;
+  animation: fade 0s;
 }
 .fade-leave-active {
   animation: fade 0.3s reverse ease-in;
-  animation-delay: 0.3s;
 }
 @keyframes fade {
   from {
