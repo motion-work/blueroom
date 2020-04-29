@@ -132,22 +132,26 @@
                 placeholder="Bemerkung (optional)"
               ></textarea>
 
-              <label class="label mb-4"
-                ><input v-model="user.isNPO" type="checkbox" name="npo" />
+              <label class="label mb-4">
+                <input v-model="user.isNPO" type="checkbox" name="npo" />
                 <span class="checkmark"></span>
-                <span class="text-2xl leading-tight ml-3">NPO</span></label
-              >
-              <label class="label"
-                ><input
+                <span class="text-2xl leading-tight ml-3">NPO</span>
+              </label>
+              <label class="label">
+                <input
                   v-model="user.catering"
                   type="checkbox"
                   name="catering"
                 />
                 <span class="checkmark"></span>
-                <span class="text-2xl leading-tight ml-3"
-                  >Mit Catering</span
-                ></label
-              >
+                <span class="text-2xl leading-tight ml-3">
+                  Mit Catering
+                </span>
+              </label>
+
+              <div class="rounded bg-green-100 py-4 px-6 mt-6 text-2xl">
+                <p>{{ selectedDate }}</p>
+              </div>
 
               <div
                 class="border-t-2 border-black flex justify-between mt-10 pt-1 font-bold"
@@ -246,6 +250,10 @@ export default {
   },
 
   computed: {
+    selectedDate() {
+      return this.$dateFns.format(this.user.date, 'iiiiii, dd. LLLL')
+    },
+
     dateMode() {
       if (this.user.duration === 'multiple') {
         return 'range'

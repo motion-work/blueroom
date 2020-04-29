@@ -96,6 +96,12 @@ export default {
       {
         enabled: true
       }
+    ],
+    [
+      '@nuxtjs/date-fns',
+      {
+        defaultLocale: 'de'
+      }
     ]
   ],
   /*

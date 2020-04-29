@@ -33,7 +33,11 @@ input[type='radio']:checked + label {
 .checkmark {
   border-width: 3px;
 
-  @apply absolute left-0 border-gray-100 bg-white rounded-sm w-8 h-8;
+  @apply absolute left-0 border-gray-100 bg-white rounded-sm w-8 h-8 transition-transform duration-200 transform;
+}
+
+.checkmark:hover {
+  @apply scale-105 border-green-200;
 }
 
 /* On mouse-over, add a gray background color */
@@ -42,6 +46,7 @@ input[type='radio']:checked + label {
 
 /* When the radio button is checked, add a blue background */
 .label input:checked ~ .checkmark {
+  @apply border-green-200;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
