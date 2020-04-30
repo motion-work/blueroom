@@ -16,12 +16,12 @@ import Logo from '~/components/Logo'
 
 export default {
   components: {
-    Logo
+    Logo,
   },
 
   data() {
     return {
-      loading: true
+      loading: true,
     }
   },
 
@@ -34,10 +34,10 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: this.loading ? 'overflow-hidden' : ''
-      }
+        class: this.loading ? 'overflow-hidden' : '',
+      },
     }
-  }
+  },
 }
 </script>
 

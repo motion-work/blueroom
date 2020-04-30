@@ -33,7 +33,7 @@ export default {
     Pricing,
     ContactForm,
     Footer,
-    Loading
+    Loading,
   },
 
   data() {
@@ -41,7 +41,7 @@ export default {
       accessToken:
         'pk.eyJ1IjoibmF0dGhha2l0IiwiYSI6ImNqeXR3dWF0YTA4M20zbXByYnAwenQ0ODUifQ.fcbrMrNcT7igb3qFiE6VJg',
       mapStyle: 'mapbox://styles/natthakit/cjytwx7x20mje1cmspnsya991',
-      center: [7.433447, 46.95154]
+      center: [7.433447, 46.95154],
     }
   },
 
@@ -51,14 +51,14 @@ export default {
     },
     trainCoords() {
       return [7.436607, 46.948578]
-    }
+    },
   },
 
   head() {
     return {
-      title: 'blueroom. | Konferenzraum mieten Bern'
+      title: 'blueroom. | Konferenzraum mieten Bern',
     }
-  }
+  },
 }
 </script>
 

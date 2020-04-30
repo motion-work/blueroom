@@ -62,7 +62,7 @@ export default {
     HalfPipe,
     Pin,
     TrainStationLabel,
-    Intro
+    Intro,
   },
 
   data() {
@@ -71,7 +71,7 @@ export default {
       accessToken:
         'pk.eyJ1IjoibmF0dGhha2l0IiwiYSI6ImNqeXR3dWF0YTA4M20zbXByYnAwenQ0ODUifQ.fcbrMrNcT7igb3qFiE6VJg',
       mapStyle: 'mapbox://styles/natthakit/cjytwx7x20mje1cmspnsya991',
-      center: [7.433453, 46.952595]
+      center: [7.433453, 46.952595],
     }
   },
 
@@ -81,7 +81,7 @@ export default {
     },
     trainCoords() {
       return [7.436607, 46.948578]
-    }
+    },
   },
 
   mounted() {
@@ -89,7 +89,7 @@ export default {
       this.center = [7.435725, 46.963184]
       this.zoom = 13.5
     }
-  }
+  },
 }
 </script>
 

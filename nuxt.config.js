@@ -11,53 +11,53 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || '',
       },
       {
         name: 'msapplication-TileColor',
-        content: '#da532c'
+        content: '#da532c',
       },
       {
         name: 'theme-color',
-        content: '#ff0000'
-      }
+        content: '#ff0000',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css'
+        href: 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
       },
       {
         rel: 'stylesheet',
         href:
-          'https://cdn.jsdelivr.net/npm/vue-mapbox@latest/dist/vue-mapbox.css'
+          'https://cdn.jsdelivr.net/npm/vue-mapbox@latest/dist/vue-mapbox.css',
       },
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
-        href: '/apple-touch-icon.png'
+        href: '/apple-touch-icon.png',
       },
       {
         rel: 'icon',
         sizes: '32x32',
-        href: '/favicon-32x32.png'
+        href: '/favicon-32x32.png',
       },
       {
         rel: 'icon',
         sizes: '16x16',
-        href: '/favicon-16x16.png'
+        href: '/favicon-16x16.png',
       },
       {
         rel: 'manifest',
-        href: '/site.webmanifest'
+        href: '/site.webmanifest',
       },
       {
         rel: 'mask-icon',
         color: '#3077bb',
-        href: '/safari-pinned-tab.svg'
-      }
-    ]
+        href: '/safari-pinned-tab.svg',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -72,7 +72,7 @@ export default {
    */
   tailwindcss: {
     cssPath: '~/assets/scss/app.scss',
-    exposeConfig: true
+    exposeConfig: true,
   },
   /*
    ** Plugins to load before mounting the App
@@ -80,7 +80,7 @@ export default {
   plugins: [
     { src: '~/plugins/vue-mapbox.client' },
     { src: '~/plugins/vue-awesome-swiper.client' },
-    { src: '~/plugins/v-calendar.client' }
+    { src: '~/plugins/v-calendar.client' },
   ],
   /*
    ** Nuxt.js dev-modules
@@ -94,15 +94,15 @@ export default {
     [
       '@teamnovu/nuxt-breaky',
       {
-        enabled: true
-      }
+        enabled: true,
+      },
     ],
     [
       '@nuxtjs/date-fns',
       {
-        defaultLocale: 'de'
-      }
-    ]
+        defaultLocale: 'de',
+      },
+    ],
   ],
   /*
    ** Nuxt.js modules
@@ -115,10 +115,10 @@ export default {
     [
       'nuxt-validate',
       {
-        lang: 'de'
-      }
+        lang: 'de',
+      },
     ],
-    ['vue-scrollto/nuxt', { duration: 2000 }]
+    ['vue-scrollto/nuxt', { duration: 2000 }],
   ],
   /*
    ** Axios module configuration
@@ -132,6 +132,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
+    extend(config, ctx) {},
+  },
 }

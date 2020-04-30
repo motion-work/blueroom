@@ -24,16 +24,16 @@ export default {
         spaceBetween: 40,
         centeredSlides: true,
         keyboard: {
-          enabled: true
-        }
+          enabled: true,
+        },
       },
       images: [
         '/img/room/5.jpg',
         '/img/room/4.jpg',
         '/img/room/2.jpg',
         '/img/room/1.jpg',
-        '/img/room/3.jpg'
-      ]
+        '/img/room/3.jpg',
+      ],
     }
   },
 
@@ -48,8 +48,8 @@ export default {
         this.swiperOption.spaceBetween = 20
         this.swiperOption.centeredSlides = false
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

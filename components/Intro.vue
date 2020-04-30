@@ -58,8 +58,8 @@ export default {
     MiniStrain,
     HalfStrain,
     OrangeMiniStrain,
-    ImageSlider
-  }
+    ImageSlider,
+  },
 }
 </script>
 

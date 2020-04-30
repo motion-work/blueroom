@@ -6,8 +6,8 @@ Vue.use(VCalendar, {
     'de-CH': {
       firstDayOfWeek: 2,
       masks: {
-        L: 'DD-MM-YYYYY'
-      }
-    }
-  }
+        L: 'DD-MM-YYYYY',
+      },
+    },
+  },
 })

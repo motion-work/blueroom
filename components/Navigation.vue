@@ -2,7 +2,7 @@
   <nav
     :class="[
       'fixed top-0 w-full z-50 transiton-fast pt-6 sm:pt-16 pb-6p',
-      isOutOfView ? 'fade-to-bg-white' : 'fade-to-bg-transparent'
+      isOutOfView ? 'fade-to-bg-white' : 'fade-to-bg-transparent',
     ]"
   >
     <div class="container flex justify-between items-center">
@@ -43,7 +43,7 @@
             class="text-2xl font-medium bg-white rounded-lg px-10 py-3 border-2 border-transparent focus:outline-none hidden sm:inline"
             :class="{
               'border-indigo-700': isOutOfView,
-              'shadow-md': !isOutOfView
+              'shadow-md': !isOutOfView,
             }"
           >
             Jetzt reservieren
@@ -59,13 +59,13 @@ import Logo from '~/components/Logo'
 
 export default {
   components: {
-    Logo
+    Logo,
   },
 
   data() {
     return {
       isOutOfView: false,
-      reachedMapArea: false
+      reachedMapArea: false,
     }
   },
 
@@ -84,8 +84,8 @@ export default {
       const newOffset = window.scrollY
       this.isOutOfView = newOffset > document.querySelector('nav').clientHeight
       this.reachedMapArea = newOffset > 700
-    }
-  }
+    },
+  },
 }
 </script>
 

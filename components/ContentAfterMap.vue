@@ -23,8 +23,8 @@ export default {
     Banner,
     Pricing,
     ContactForm,
-    Footer
-  }
+    Footer,
+  },
 }
 </script>
 

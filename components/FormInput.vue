@@ -21,36 +21,36 @@ export default {
 
     name() {
       return this.fieldName
-    }
+    },
   },
 
   props: {
     value: {
       type: null,
       required: false,
-      default: null
+      default: null,
     },
     name: {
       type: String,
-      default: null
+      default: null,
     },
     label: {
       type: String,
       required: false,
-      default: null
+      default: null,
     },
     error: {
       type: String,
-      default: null
+      default: null,
     },
     type: {
       type: String,
-      default: 'text'
+      default: 'text',
     },
     reversed: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
 
   data() {
@@ -64,7 +64,7 @@ export default {
       }
 
       return this.label.toLowerCase()
-    }
+    },
   },
 
   mounted() {
@@ -74,8 +74,8 @@ export default {
   methods: {
     update($event) {
       this.$emit('input', $event.target.value)
-    }
-  }
+    },
+  },
 }
 </script>
 

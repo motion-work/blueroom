@@ -149,8 +149,22 @@
                 </span>
               </label>
 
-              <div class="rounded bg-green-100 py-4 px-6 mt-6 text-2xl">
-                <p>{{ selectedDate }}</p>
+              <div
+                v-if="user.date && user.duration === 'multiple'"
+                class="rounded bg-green-100 py-4 px-6 mt-6 text-2xl"
+              >
+                <p>
+                  {{ selectedDateRange(user.date).start }} -
+                  {{ selectedDateRange(user.date).end }}
+                </p>
+              </div>
+              <div
+                v-if="user.date && user.duration !== 'multiple'"
+                class="rounded bg-green-100 py-4 px-6 mt-6 text-2xl"
+              >
+                <p>
+                  {{ selectedDate(user.date) }}
+                </p>
               </div>
 
               <div
@@ -195,7 +209,7 @@ import FormInput from '~/components/FormInput'
 
 export default {
   components: {
-    FormInput
+    FormInput,
   },
 
   data() {
@@ -209,51 +223,48 @@ export default {
         duration: 'day',
         date: new Date(),
         catering: false,
-        isNPO: false
+        isNPO: false,
       },
       selectAttribute: {
         highlight: {
-          color: 'purple'
-        }
+          color: 'purple',
+        },
       },
       attrs: [
         {
           key: 'today',
           highlight: {
-            color: 'red'
+            color: 'red',
           },
-          dates: new Date()
-        }
+          dates: new Date(),
+        },
       ],
       calendarTheme: {
         container: {
-          light: 'max-w-full border-2 border-gray-100 vc-rounded-lg vc-bg-white'
+          light:
+            'max-w-full border-2 border-gray-100 vc-rounded-lg vc-bg-white',
         },
         title: {
-          light: 'text-3xl font-body hover:text-indigo-600 mb-4'
+          light: 'text-3xl font-body hover:text-indigo-600 mb-4',
         },
         dayCell: 'bg-indigo-600',
         dayContent: 'text-2xl font-body rounded-full p-6 hover:bg-indigo-600',
         dayContentDisabled: {
           light:
-            'text-2xl font-body rounded-full p-6 vc-text-gray-400 vc-pointer-events-none'
+            'text-2xl font-body rounded-full p-6 vc-text-gray-400 vc-pointer-events-none',
         },
         weekdays: {
-          light: 'text-xl font-body vc-font-bold vc-text-gray-500'
+          light: 'text-xl font-body vc-font-bold vc-text-gray-500',
         },
         arrows: {
           light:
-            'vc-text-gray-600 vc-rounded vc-border-transparent hover:text-indigo-600 focus:vc-border-gray-300 h-10'
-        }
-      }
+            'vc-text-gray-600 vc-rounded vc-border-transparent hover:text-indigo-600 focus:vc-border-gray-300 h-10',
+        },
+      },
     }
   },
 
   computed: {
-    selectedDate() {
-      return this.$dateFns.format(this.user.date, 'iiiiii, dd. LLLL')
-    },
-
     dateMode() {
       if (this.user.duration === 'multiple') {
         return 'range'
@@ -272,16 +283,23 @@ export default {
       }
 
       return this.user.isNPO ? 299 : 460
-    }
+    },
   },
 
   methods: {
-    decrement() {},
-    increment() {},
+    selectedDate(date) {
+      return this.$dateFns.format(date, 'iiiiii, d. LLLL')
+    },
+    selectedDateRange({ start, end }) {
+      return {
+        start: this.$dateFns.format(start, 'iiiiii, d. LLLL'),
+        end: this.$dateFns.format(end, 'iiiiii, d. LLLL'),
+      }
+    },
     send() {
       console.log(this.user)
-    }
-  }
+    },
+  },
 }
 </script>
 
