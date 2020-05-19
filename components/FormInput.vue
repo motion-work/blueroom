@@ -8,12 +8,20 @@
       class="input"
       @input="update($event)"
     />
-    <span v-if="error" class="text-sm mt-2 tracking-wide">{{ error }} </span>
+    <TransitionExpand>
+      <span v-if="error" class="text-sm ml-6 mt-2">{{ error }}</span>
+    </TransitionExpand>
   </div>
 </template>
 
 <script>
+import TransitionExpand from '~/components/TransitionExpand'
+
 export default {
+  components: {
+    TransitionExpand,
+  },
+
   $_veeValidate: {
     value() {
       return this.$refs.input.value

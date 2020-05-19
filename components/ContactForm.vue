@@ -118,11 +118,11 @@
               />
               <FormInput
                 v-model="user.company"
-                v-validate="'required'"
+                v-validate="user.catering ? 'required' : ''"
                 name="Firma"
                 required
                 :error="errors.first('Firma')"
-                placeholder="Firma (optional)"
+                :placeholder="`Firma ${user.catering ? '' : '(optional)'}`"
                 class="mb-5"
               />
               <FormInput
@@ -187,6 +187,7 @@
               <div class="text-right">
                 <button
                   type="submit"
+                  :disabled="errors.items.length > 0"
                   class="bg-green-400 text-2xl w-full text-white font-bold px-10 py-3 mt-6 md:mt-8 rounded-xl flex items-center justify-center"
                 >
                   Anfrage senden
