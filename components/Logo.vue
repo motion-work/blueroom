@@ -24,6 +24,10 @@ export default {}
 
 <style lang="scss" scoped>
 .slide-in {
+  will-change: opacity, transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
   animation: slideIn 1.3s forwards;
 }
 @keyframes slideIn {

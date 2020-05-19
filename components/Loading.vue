@@ -5,7 +5,7 @@
     appear-enter-class="fade-enter-active"
     leave-active-class="fade-leave-active"
   >
-    <div v-if="loading" class="fixed inset-0 bg-white z-top flex-center">
+    <div v-show="loading" class="fixed inset-0 bg-white z-top flex-center">
       <Logo />
     </div>
   </transition>
