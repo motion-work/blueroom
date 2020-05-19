@@ -134,7 +134,8 @@ export default {
     whitelist: ['whitespace-no-wrap'],
     whitelistPatternsChildren: [/^tooltip$/],
     whitelistPatterns: [
-      /^vc-/,
+      /^swiper-/, // vue-awesome-swiper
+      /^vc-/, // v-calendar
       /^vs-/,
       /^vs__/,
       /^vs--/,
