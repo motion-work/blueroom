@@ -161,7 +161,7 @@
                   name="catering"
                 />
                 <span class="checkmark"></span>
-                <div class="flex">
+                <div class="flex items-center">
                   <span class="text-2xl leading-tight ml-3 mr-1">
                     Mit Catering
                   </span>
