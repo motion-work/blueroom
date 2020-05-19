@@ -81,6 +81,7 @@ export default {
     { src: '~/plugins/vue-mapbox.client' },
     { src: '~/plugins/vue-awesome-swiper.client' },
     { src: '~/plugins/v-calendar.client' },
+    { src: '~/plugins/v-tooltip.client' },
   ],
   /*
    ** Nuxt.js dev-modules

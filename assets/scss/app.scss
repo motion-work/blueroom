@@ -1,9 +1,12 @@
 /* purgecss start ignore */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
-@import '_fonts';
-@import '_inputs';
+// plugins
+@import "_v-tooltip";
+
+@import "_fonts";
+@import "_inputs";
 
 body {
   @apply font-body antialiased;
@@ -40,4 +43,4 @@ body {
 }
 
 /* purgecss end ignore */
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";
