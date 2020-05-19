@@ -1,3 +1,9 @@
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[\w-/.:]+(?<!:)/g) || []
+  }
+}
+
 export default {
   mode: 'universal',
   /*
@@ -121,6 +127,31 @@ export default {
     ],
     ['vue-scrollto/nuxt', { duration: 2000 }],
   ],
+  /*
+   ** Purge CSS configuration
+   */
+  purgeCSS: {
+    whitelist: ['whitespace-no-wrap'],
+    whitelistPatternsChildren: [/^tooltip$/],
+    whitelistPatterns: [
+      /^vc-/,
+      /^vs-/,
+      /^vs__/,
+      /^vs--/,
+      /-enter-active$/,
+      /-leave-active$/,
+      /-enter$/,
+      /-leave-to$/,
+    ],
+    extractors: () => {
+      return [
+        {
+          extractor: TailwindExtractor,
+          extensions: ['vue', 'js'],
+        },
+      ]
+    },
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
