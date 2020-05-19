@@ -90,6 +90,23 @@
         <div class="w-full lg:w-1/2 px-4 xl:px-8">
           <div class="flex flex-wrap mt-8 lg:mt-0">
             <div class="w-full xl:w-2/3">
+              <div class="rounded-xl bg-indigo-100 py-4 px-6 text-2xl mb-5">
+                <template v-if="!user.date">
+                  Wählen Sie Ihr gewünschtes Datum
+                </template>
+                <template v-if="user.date && user.duration === 'multiple'">
+                  <p>
+                    {{ selectedDateRange(user.date).start }} -
+                    {{ selectedDateRange(user.date).end }}
+                  </p>
+                </template>
+                <template v-if="user.date && user.duration !== 'multiple'">
+                  <p>
+                    {{ selectedDate(user.date) }}
+                  </p>
+                </template>
+              </div>
+
               <FormInput
                 v-model="user.name"
                 v-validate="'required'"
@@ -152,24 +169,6 @@
                   <svg class="transition duration-200 text-indigo-200 hover:text-indigo-400 w-6 mt-1" v-tooltip="'Wird im nächsten Schritt telefonisch definiert'" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
                 </div>
               </label>
-
-              <div
-                v-if="user.date && user.duration === 'multiple'"
-                class="rounded bg-green-100 py-4 px-6 mt-6 text-2xl"
-              >
-                <p>
-                  {{ selectedDateRange(user.date).start }} -
-                  {{ selectedDateRange(user.date).end }}
-                </p>
-              </div>
-              <div
-                v-if="user.date && user.duration !== 'multiple'"
-                class="rounded bg-green-100 py-4 px-6 mt-6 text-2xl"
-              >
-                <p>
-                  {{ selectedDate(user.date) }}
-                </p>
-              </div>
 
               <div
                 class="border-t-2 border-black flex justify-between mt-10 pt-1 font-bold"
@@ -292,16 +291,16 @@ export default {
 
   methods: {
     selectedDate(date) {
-      console.log('single', date)
-      return this.$dateFns.format(new Date(), 'iiiiii, d. LLLL')
+      return this.$dateFns.format(new Date(), 'iiii, d. LLLL Y')
     },
+
     selectedDateRange({ start, end }) {
-      console.log(start, end)
       return {
-        start: this.$dateFns.format(new Date(), 'iiiiii, d. LLLL'),
-        end: this.$dateFns.format(new Date(), 'iiiiii, d. LLLL'),
+        start: this.$dateFns.format(start || new Date(), 'iiiiii, d. LLLL'),
+        end: this.$dateFns.format(end || new Date(), 'iiiiii, d. LLLL Y'),
       }
     },
+
     send() {
       console.log(this.user)
     },
